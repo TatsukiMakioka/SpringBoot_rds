@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS ToDo (
+    ID VARCHAR(36) PRIMARY KEY,
+    Title VARCHAR(128) NOT NULL,
+    Description TEXT NOT NULL,
+    createdAT TIMESTAMP NOT NULL,
+    updatedAT TIMESTAMP,
+    finishedAT TIMESTAMP
+    );
