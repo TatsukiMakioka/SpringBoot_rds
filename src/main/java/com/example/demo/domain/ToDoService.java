@@ -118,6 +118,7 @@ public class ToDoService {
      * @return A list of ToDo items that match the query.
      */
     public List<ToDoData> searchToDos(String query) {
-        return repository.search("%" + query + "%");
+        String lowercaseQuery = query.toLowerCase();
+        return repository.search("%" + lowercaseQuery + "%");
     }
 }
