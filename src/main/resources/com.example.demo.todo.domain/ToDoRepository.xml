@@ -33,7 +33,6 @@
 
     <!-- Search for ToDo items by keyword in title or description -->
     <select id="search" parameterType="string" resultType="com.example.demo.domain.dto.ToDoData">
-        SELECT * FROM ToDo WHERE title LIKE #{value} OR description LIKE #{value}
+        SELECT * FROM ToDo WHERE UPPER(title) LIKE UPPER(#{value}) OR UPPER(description) LIKE UPPER(#{value})
     </select>
-
 </mapper>
